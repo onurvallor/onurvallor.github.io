@@ -63,14 +63,14 @@
 		<img src="images/new_read_crud.png" alt="Image for new read function code snippet" srcset="">
 		<p> Another enhancement made was to reduce client-side strain to MongoDB using an aggregation pipeline. In this particular case, the pie-chart now offloads the work to MongoDB’s optimized C++ engine, speeding up the visualization and reducing load on the server. A course outcome that I believe was specifically met through this enhancement was developing with a security mindset that anticipates adversarial exploits in software. By creating a secure connection to the database by adding SHA-256 to the URI string and by moving the hardcoded credentials of the database to an outside environmental variable, I have mitigated design flaws and enhanced the security of the data and resources of this artifact. The biggest challenge for me was expanding my knowledge of databases. I have only ever used databases for simple and small tasks so I did not have deeper knowledge on what goes on underneath the hood. This enhancement led me to go through some of the documentation provided by MongoDB to see what I could utilize and what is possible.</p>
 
-		<h2>Security</h2>
+		<h2 id="security">Security</h2>
 		<p>By following the DevSecOps cycle, an individual or team of programs integrate security into every part of the developement life cycle. For the "Grazioso Salvare" artifact, I have removed harcoded credentials for the database and moved them into an environmental variable that is not visible nor accessible to users. Aligns with the principle of least privilege.</p>
 		<img src="images/env_variables.png" alt="Image of the environmental variable setup to remove hardcoded credentials from the codebase" srcset="">
 		<p>For connecting to the database with proper user authentication I used SCRAM-SHA-256 authentication for the MongoDB URI. This enforces encrypted authentication between the dashboard and MongoDB.</p>
 		<img src="images/scram_sha_256.png" alt="Image of URI string using SCRAM-SHA-256 for authentication and encryption" srcset="">
 		<p>When dealing with conditional code blocks, it is important to have default cases to use as a way to mitigate any unintended behavior. This way the program can fail gracefully in predictable ways without suddenly crashing. This security enhancement can also help handle invalid inputs or database issues through error messages.</p>
 	
-		<h2>Submissions</h2>
+		<h2 id="submissions">Submissions</h2>
 
 	</main>
 </body>
